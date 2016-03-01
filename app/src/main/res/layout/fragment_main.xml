@@ -6,12 +6,20 @@
     android:padding="16dp"
     tools:context="com.zonkey.saymyname.MainActivity$PlaceholderFragment">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Say My Name"
+        android:textStyle="italic"
+        android:textSize="48sp"
+        android:textColor="@android:color/white"
+        android:layout_gravity="center_horizontal"/>
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/imageView2"
-        android:src="@drawable/fatguy" />
+        android:src="@drawable/fatguy"/>
 
     <Switch
         android:layout_width="wrap_content"
@@ -19,7 +27,11 @@
         android:switchPadding="8dp"
         android:textOff="@string/switch_text_off"
         android:textOn="@string/switch_text_on"
-        android:layout_gravity="center_horizontal"/>
+        android:layout_gravity="center_horizontal"
+        android:showText="true"
+        android:thumbTextPadding="4dp"
+        android:textColor="@android:color/white"
+        />
 
     <LinearLayout
         android:layout_width="match_parent"

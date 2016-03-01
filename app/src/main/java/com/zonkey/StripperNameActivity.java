@@ -6,6 +6,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.zonkey.saymyname.R;
@@ -41,22 +42,27 @@ public class StripperNameActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+
     /**
      * this method is called when the traditional button is pressed
      * @param view
      */
+
     public void generateTraditionalName (View view){
-        String stripperName = getString(R.string.pet_name) + getString(R.string.pet_name);
+        EditText petText = (EditText) findViewById(R.id.pet_name);
+        EditText streetText = (EditText)findViewById(R.id.street_name);
+        String stripperName = petText.getText().toString() + " " + streetText.getText().toString();
         Toast.makeText(this, "Your stripper name is " + stripperName, Toast.LENGTH_LONG).show();
 
     }
-
     /**
      * this method is called when the twisted button is pressed
      * @param view
      */
     public void generateTwistedName (View view){
-        String stripperName = getString(R.string.muppet_name) + getString(R.string.ice_cream);
+        EditText muppetText = (EditText) findViewById(R.id.muppet_name);
+        EditText iceCreamText = (EditText)findViewById(R.id.ice_cream);
+        String stripperName = muppetText.getText().toString() + " " + iceCreamText.getText().toString();
         Toast.makeText(this, "Your stripper name is " + stripperName, Toast.LENGTH_LONG).show();
 
     }
@@ -66,7 +72,9 @@ public class StripperNameActivity extends AppCompatActivity {
      * @param view
      */
     public void generateAmericanName (View view){
-        String stripperName = getString(R.string.fast_food) + getString(R.string.grandparent_name);
+        EditText fastFoodText = (EditText)findViewById(R.id.fast_food);
+        EditText grandParentText = (EditText)findViewById(R.id.grandparent_name);
+        String stripperName = fastFoodText.getText().toString() + " " + grandParentText.getText().toString();
         Toast.makeText(this, "Your stripper name is " + stripperName, Toast.LENGTH_LONG).show();
 
     }
