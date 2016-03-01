@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/imageView"
+        android:src="@drawable/cowboy" />
+
+    <RelativeLayout
+        android:id="@+id/tab2RelativeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:id="@+id/tab2ATextview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tab_3_A"
+            android:textColor="@android:color/white"
+            android:textSize="64sp"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/tab2StripperTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tab_3_stripper"
+            android:layout_below="@+id/tab2ATextview"
+            android:textColor="@android:color/white"
+            android:textSize="64sp"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/tab2NameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tab_3_name"
+            android:layout_below="@+id/tab2StripperTextView"
+            android:textColor="@android:color/white"
+            android:textSize="64sp"
+            android:layout_centerHorizontal="true"/>
+
+
+        </RelativeLayout>
+
+
+
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tab_3_button"
+        android:id="@+id/button"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/tab2RelativeLayout"
+        android:layout_margin="16dp"
+        android:layout_centerHorizontal="true"
+        android:onClick="letsDance"
+        />
+
+</RelativeLayout>

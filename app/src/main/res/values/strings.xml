@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Say My Name</string>
+
+    <!--menu strings-->
+    <string name="action_settings">Settings</string>
+
+    <!--fragment_main strings-->
+    <string name="swipe_me">Swipe Me</string>
+    <string name="switch_text_on">Dudes</string>
+    <string name="switch_text_off">Chicks</string>
+
+    <!--tab_2 strings-->
+    <string name="tab_2_textView">So you\'re ready to make a bold career move and go from office-worker zero to pole-dancing hero huh! Well you\'re not gonna get too far in this biz with your boring old birth name.</string>
+    <string name="tab_2_you_need_textView">You need&#8230;</string>
+
+    <!--tab_2 strings-->
+    <string name="tab_3_A">A</string>
+    <string name="tab_3_stripper">Stripper</string>
+    <string name="tab_3_name">Name!</string>
+    <string name="tab_3_button">Let\'s dance!</string>
+    <string name="title_activity_stripper_name">StripperNameActivity</string>
+
+    <!--Stripper name parameter strings-->
+    <string name="pet_name">First pet\'s name</string>
+    <string name="muppet_name">Favorite Muppet\'s name</string>
+    <string name="grandparent_name">Grandparent\'s first name</string>
+    <string name="fast_food">Favorite fast food entree</string>
+    <string name="ice_cream">Favorite ice cream topping</string>
+    <string name="street_name">Street you grew up on</string>
+    <!--name generator buttons-->
+    <string name="traditional_name_generator">Traditional</string>
+    <string name="american_name_generator">American</string>
+    <string name="twisted_name_generator">Twisted</string>
+
+
+
+
+</resources>

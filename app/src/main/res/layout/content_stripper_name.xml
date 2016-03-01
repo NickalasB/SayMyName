@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="8dp"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context="com.zonkey.StripperNameActivity"
+        tools:showIn="@layout/activity_stripper_name">
+
+
+        <EditText
+            android:id="@+id/pet_name"
+            style="@style/TextStyle"
+            android:hint="@string/pet_name" />
+
+        <EditText
+            android:id="@+id/muppet_name"
+            style="@style/TextStyle"
+            android:hint="@string/muppet_name" />
+
+        <EditText
+            android:id="@+id/grandparent_name"
+            style="@style/TextStyle"
+            android:hint="@string/grandparent_name" />
+
+        <EditText
+            android:id="@+id/fast_food"
+            style="@style/TextStyle"
+            android:hint="@string/fast_food" />
+
+        <EditText
+            android:id="@+id/ice_cream"
+            style="@style/TextStyle"
+            android:hint="@string/ice_cream" />
+
+        <EditText
+            android:id="@+id/street_name"
+            style="@style/TextStyle"
+            android:hint="@string/street_name" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/american_name_generator_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:onClick="generateAmericanName"
+                android:text="@string/american_name_generator" />
+
+            <Button
+                android:id="@+id/traditional_name_generator_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:onClick="generateTraditionalName"
+                android:text="@string/traditional_name_generator" />
+
+            <Button
+                android:id="@+id/twisted_name_generator_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:onClick="generateTwistedName"
+                android:text="@string/twisted_name_generator" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
