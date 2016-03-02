@@ -6,12 +6,19 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.zonkey.saymyname.R;
 
 public class StripperNameActivity extends AppCompatActivity {
+
+ //The Spinners
+    Spinner muppetSpinner;
+    Spinner fastFoodSpinner;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +26,24 @@ public class StripperNameActivity extends AppCompatActivity {
         setContentView(R.layout.activity_stripper_name);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        toolbar.collapseActionView();
+
+//All of this is the muppet Spinner
+        muppetSpinner = (Spinner) findViewById(R.id.muppet_name_spinner);
+        ArrayAdapter<CharSequence> muppetAdapter = ArrayAdapter.createFromResource(this, R.array.muppets_array, R.layout.spinner_layout);
+        muppetSpinner.setPrompt("Favorite Muppet");
+        muppetAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        muppetSpinner.setAdapter(muppetAdapter);
+//End of spinner stuff
+
+// All of this is the fastfood Spinner
+        fastFoodSpinner = (Spinner) findViewById(R.id.fast_food_spinner);
+        ArrayAdapter<CharSequence> fastFoodAdapter = ArrayAdapter.createFromResource(this, R.array.fast_food_array, R.layout.spinner_layout);
+        fastFoodSpinner.setPrompt("Favorite Fast Food Entree");
+        fastFoodAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        fastFoodSpinner.setAdapter(fastFoodAdapter);
+//End of spinner stuff
+
     }
 
     @Override
@@ -43,6 +68,8 @@ public class StripperNameActivity extends AppCompatActivity {
     }
 
 
+
+
     /**
      * this method is called when the traditional button is pressed
      * @param view
@@ -60,9 +87,9 @@ public class StripperNameActivity extends AppCompatActivity {
      * @param view
      */
     public void generateTwistedName (View view){
-        EditText muppetText = (EditText) findViewById(R.id.muppet_name);
+        Spinner muppetSpinner = (Spinner) findViewById(R.id.muppet_name_spinner);
         EditText iceCreamText = (EditText)findViewById(R.id.ice_cream);
-        String stripperName = muppetText.getText().toString() + " " + iceCreamText.getText().toString();
+        String stripperName = muppetSpinner.getSelectedItem().toString() + " " + iceCreamText.getText().toString();
         Toast.makeText(this, "Your stripper name is " + stripperName, Toast.LENGTH_LONG).show();
 
     }
@@ -72,9 +99,9 @@ public class StripperNameActivity extends AppCompatActivity {
      * @param view
      */
     public void generateAmericanName (View view){
-        EditText fastFoodText = (EditText)findViewById(R.id.fast_food);
+        Spinner fastFoodSpinner = (Spinner) findViewById(R.id.fast_food_spinner);
         EditText grandParentText = (EditText)findViewById(R.id.grandparent_name);
-        String stripperName = fastFoodText.getText().toString() + " " + grandParentText.getText().toString();
+        String stripperName = fastFoodSpinner.getSelectedItem().toString() + " " + grandParentText.getText().toString();
         Toast.makeText(this, "Your stripper name is " + stripperName, Toast.LENGTH_LONG).show();
 
     }

@@ -24,7 +24,10 @@
 
     <include
         layout="@layout/content_stripper_name"
-        android:nestedScrollingEnabled="true">
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:layout_gravity="center">
     </include>
 
 </android.support.design.widget.CoordinatorLayout>

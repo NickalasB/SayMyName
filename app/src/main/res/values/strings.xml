@@ -32,6 +32,31 @@
     <string name="american_name_generator">American</string>
     <string name="twisted_name_generator">Twisted</string>
 
+    <!--Muppet Array-->
+        <string-array name="muppets_array">
+            <item>Favorite Muppet\'s name</item>
+            <item>Kermit</item>
+            <item>Grover</item>
+            <item>Big Bird</item>
+            <item>Animal</item>
+            <item>Piggy</item>
+            <item>Fozzy</item>
+            <item>Beaker</item>
+            <item>Elmo</item>
+        </string-array>
+
+    <!--Fast Food Array-->
+    <string-array name="fast_food_array">
+        <item>Favorite Fast Food Entree</item>
+        <item>Chalupa</item>
+        <item>Big Mac</item>
+        <item>Quarter Pounder</item>
+        <item>Whopper</item>
+        <item>Chicken Nugget</item>
+        <item>Foot Long</item>
+        <item>Corn Dog</item>
+        <item>Croissanwich</item>
+    </string-array>
 
 
 
