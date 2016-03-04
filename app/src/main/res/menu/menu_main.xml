@@ -2,9 +2,21 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.zonkey.saymyname.MainActivity">
-    <item
-        android:id="@+id/action_settings"
-        android:orderInCategory="100"
-        android:title="@string/action_settings"
-        app:showAsAction="never" />
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/dude_theme"
+            android:orderInCategory="1"
+            app:showAsAction="never"
+            android:title="@string/dude_theme_string"/>
+
+        <item
+            android:id="@+id/chick_theme"
+            android:orderInCategory="2"
+            app:showAsAction="never"
+            android:title="@string/chick_theme_string"/>
+
+
+
+    </group>
 </menu>

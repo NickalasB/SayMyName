@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
@@ -53,19 +52,31 @@ public class StripperNameActivity extends AppCompatActivity {
         return true;
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
+//    @Override
+//    public boolean onOptionsItemSelected(MenuItem item) {
+//        RelativeLayout main_content = (RelativeLayout) findViewById(R.id.main_content);
+//        switch (item.getItemId()) {
+//            case R.id.dude_theme:
+//                if (item.isChecked())
+//                    item.setChecked(false);
+//                else
+//                    item.setChecked(true);
+//                Toast.makeText(this, "This Button Works Dude", Toast.LENGTH_LONG).show();
+////                main_content.setBackgroundColor(Color.GREEN);
+//                return true;
+////            case R.id.chick_theme:
+////                if (item.isChecked())
+////                    item.setChecked(false);
+////                else
+////                    item.setChecked(true);
+////                main_content.setBackgroundColor(Color.GREEN);
+////                return true;
+//            default:
+//                super.onOptionsItemSelected(item);
+//        }
+//        return true;
+//
+//    }
 
 
     /**

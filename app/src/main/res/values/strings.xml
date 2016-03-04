@@ -58,5 +58,11 @@
         <item>Croissanwich</item>
     </string-array>
 
+    <!--Menu item Strings-->
+    <string name="chick_theme_string">Chick Theme</string>
+    <string name="dude_theme_string">Dude Theme</string>
+
+
+
 
 </resources>
