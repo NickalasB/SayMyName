@@ -62,6 +62,10 @@
     <string name="chick_theme_string">Chick Theme</string>
     <string name="dude_theme_string">Dude Theme</string>
 
+    <!--CompletedStripperNameActivity String-->
+    <string name="your_name_is_string">Your stripper name is</string>
+
+
 
 
 

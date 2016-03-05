@@ -1,24 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <TextView
+        android:id="@+id/completed_name_textview1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
         android:textColor="@android:color/white"
         android:textSize="36sp"
-        android:text="Your stripper name is"
-        android:padding="16dp"/>
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"/>
 
 
     <TextView
-        android:id="@+id/final_name_text_view"
+        android:id="@+id/completed_name_text_view2"
+        android:layout_below="@+id/completed_name_textview1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
         android:textColor="@android:color/white"
         android:textSize="36sp"
-        android:padding="16dp"/>
-</LinearLayout>
+        android:layout_margin="16dp"/>
+</RelativeLayout>

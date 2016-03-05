@@ -5,10 +5,12 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.zonkey.saymyname.R;
 
@@ -43,6 +45,13 @@ public class StripperNameActivity extends AppCompatActivity {
         fastFoodSpinner.setAdapter(fastFoodAdapter);
 //End of spinner stuff
 
+        toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener () {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                Toast.makeText(StripperNameActivity.this, "It works!!", Toast.LENGTH_LONG).show();
+                return true;
+            }
+        });
     }
 
     @Override
@@ -50,7 +59,10 @@ public class StripperNameActivity extends AppCompatActivity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
+
     }
+
+
 
 //    @Override
 //    public boolean onOptionsItemSelected(MenuItem item) {
@@ -62,15 +74,15 @@ public class StripperNameActivity extends AppCompatActivity {
 //                else
 //                    item.setChecked(true);
 //                Toast.makeText(this, "This Button Works Dude", Toast.LENGTH_LONG).show();
-////                main_content.setBackgroundColor(Color.GREEN);
+//                main_content.setBackgroundColor(Color.GREEN);
 //                return true;
-////            case R.id.chick_theme:
-////                if (item.isChecked())
-////                    item.setChecked(false);
-////                else
-////                    item.setChecked(true);
-////                main_content.setBackgroundColor(Color.GREEN);
-////                return true;
+//            case R.id.chick_theme:
+//                if (item.isChecked())
+//                    item.setChecked(false);
+//                else
+//                    item.setChecked(true);
+//                main_content.setBackgroundColor(Color.GREEN);
+//                return true;
 //            default:
 //                super.onOptionsItemSelected(item);
 //        }
