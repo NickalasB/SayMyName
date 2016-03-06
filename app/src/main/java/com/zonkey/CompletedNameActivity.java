@@ -10,7 +10,6 @@ import com.zonkey.saymyname.R;
 
 public class CompletedNameActivity extends AppCompatActivity {
 
-
     /**
      *
      * all of this handles getting the extra string from the StripperNameActivity and also does some rudimentary animation
@@ -28,7 +27,6 @@ public class CompletedNameActivity extends AppCompatActivity {
             completedNameTextView2.setText(getIntent().getStringExtra("finalStripperName") + "!!!");
         }
         completedNameTextView2.startAnimation(AnimationUtils.loadAnimation(CompletedNameActivity.this, android.R.anim.fade_in));
-
 
 
 

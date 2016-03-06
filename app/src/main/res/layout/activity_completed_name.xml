@@ -4,6 +4,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
+    <ImageView
+        android:id="@+id/gender_tester_image_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/skinnylady"
+        android:layout_margin="8dp"/>
+
     <TextView
         android:id="@+id/completed_name_textview1"
         android:layout_width="wrap_content"
@@ -27,4 +35,7 @@
         android:textColor="@android:color/white"
         android:textSize="36sp"
         android:layout_margin="16dp"/>
+
+
+
 </RelativeLayout>

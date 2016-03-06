@@ -6,7 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 
-public class Tab3 extends PlaceHolderFragment{
+public class Tab3 extends Tab1 {
     private static final String ARG_SECTION_NUMBER = "section_number";
 
     public static Tab3 newInstance(int sectionNumber) {

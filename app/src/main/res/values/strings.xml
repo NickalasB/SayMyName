@@ -4,7 +4,8 @@
     <!--menu strings-->
     <string name="action_settings">Settings</string>
 
-    <!--fragment_main strings-->
+    <!--tab_1 strings-->
+    <string name="say_my_name_string">Say My Name</string>
     <string name="swipe_me">Swipe Me</string>
     <string name="switch_text_on">Dudes</string>
     <string name="switch_text_off">Chicks</string>
@@ -13,7 +14,7 @@
     <string name="tab_2_textView">So you\'re ready to make a bold career move and go from office-worker zero to pole-dancing hero huh! Well you\'re not gonna get too far in this biz with your boring old birth name.</string>
     <string name="tab_2_you_need_textView">You need&#8230;</string>
 
-    <!--tab_2 strings-->
+    <!--tab_3 strings-->
     <string name="tab_3_A">A</string>
     <string name="tab_3_stripper">Stripper</string>
     <string name="tab_3_name">Name!</string>
