@@ -39,24 +39,23 @@
         />
 
     <LinearLayout
-        android:layout_width="353dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_gravity="bottom">
+        android:layout_gravity="bottom"
+        android:gravity="center_vertical">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="@string/swipe_me"
             android:textColor="@android:color/white"
             android:textSize="36sp"
-            android:layout_gravity="center_vertical"
             android:layout_weight="1"/>
 
         <ImageView
             android:layout_width="36dp"
             android:layout_height="36dp"
-            android:src="@drawable/arrow"
-            android:layout_weight="1"/>
+            android:src="@drawable/arrow"/>
     </LinearLayout>
 </LinearLayout>
