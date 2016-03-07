@@ -3,7 +3,6 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical"
     android:padding="16dp"
     tools:context="com.zonkey.saymyname.MainActivity$PlaceholderFragment">
 
@@ -11,12 +10,12 @@
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
-        android:layout_height="fill_parent"
+        android:layout_height="match_parent"
         android:scaleType="fitCenter"
         android:src="@drawable/cowboy"/>
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:padding="16dp"
@@ -32,19 +31,20 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:orientation="horizontal"
-        android:paddingBottom="8dp">
+        android:paddingBottom="8dp"
+        android:gravity="center_vertical">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="@string/tab_2_you_need_textView"
             android:textColor="@android:color/white"
-            android:textIsSelectable="true"
-            android:textSize="56sp" />
+            android:textSize="36sp"
+            android:layout_weight="1"/>
 
         <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
             android:src="@drawable/arrow"/>
     </LinearLayout>
 </RelativeLayout>
