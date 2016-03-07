@@ -20,8 +20,9 @@
         </activity>
         <activity
             android:name="com.zonkey.StripperNameActivity"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name="com.zonkey.CompletedNameActivity"></activity>
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity android:name="com.zonkey.CompletedNameActivity"/>
     </application>
 
 </manifest>
