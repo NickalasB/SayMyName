@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">Say My Name</string>
+    <!--facebook id-->
+    <string name="facebook_app_id">489361441254122</string>
+
 
     <!--menu strings-->
     <string name="action_settings">Settings</string>

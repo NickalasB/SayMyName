@@ -16,12 +16,12 @@ import android.widget.Switch;
  */
 public class Tab1 extends Fragment {
 
-    private ImageView genderImage;
     /**
      * The fragment argument representing the section number for this
      * fragment.
      */
     private static final String ARG_SECTION_NUMBER = "section_number";
+    private ImageView genderImage;
 
     /**
      * Returns a new instance of this fragment for the given section
@@ -39,16 +39,14 @@ public class Tab1 extends Fragment {
     public View onCreateView(final LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         View rootView = inflater.inflate(R.layout.tab_1, container, false);
-        genderImage = (ImageView)rootView.findViewById(R.id.stripperPicImageView);
-        Switch genderSwitch = (Switch)rootView.findViewById(R.id.gender_switch);
+        genderImage = (ImageView) rootView.findViewById(R.id.stripperPicImageView);
+        Switch genderSwitch = (Switch) rootView.findViewById(R.id.gender_switch);
         genderSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                genderImage.setImageResource(isChecked ? R.drawable.skinnylady : R.drawable.fatguy);
+                genderImage.setImageResource(isChecked ? R.drawable.fatlady : R.drawable.fatguy);
             }
         });
-
-
         return rootView;
     }
 
