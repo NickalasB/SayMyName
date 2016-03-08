@@ -43,13 +43,6 @@ public class StripperNameActivity extends AppCompatActivity {
         fastFoodSpinner.setAdapter(fastFoodAdapter);
 //End of spinner stuff
 
-//        toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener () {
-//            @Override
-//            public boolean onMenuItemClick(MenuItem item) {
-//                Toast.makeText(StripperNameActivity.this, "It works!!", Toast.LENGTH_LONG).show();
-//                return true;
-//            }
-//        });
     }
 
     @Override
@@ -60,26 +53,23 @@ public class StripperNameActivity extends AppCompatActivity {
 
     }
 
-
-
 //    @Override
 //    public boolean onOptionsItemSelected(MenuItem item) {
-//        RelativeLayout main_content = (RelativeLayout) findViewById(R.id.main_content);
+//        ImageView genderImage = (ImageView)findViewById(R.id.gender_tester_image_view);
 //        switch (item.getItemId()) {
 //            case R.id.dude_theme:
 //                if (item.isChecked())
 //                    item.setChecked(false);
 //                else
 //                    item.setChecked(true);
-//                Toast.makeText(this, "This Button Works Dude", Toast.LENGTH_LONG).show();
-//                main_content.setBackgroundColor(Color.GREEN);
+//                genderImage.setImageResource(R.drawable.fatguy);
 //                return true;
 //            case R.id.chick_theme:
 //                if (item.isChecked())
 //                    item.setChecked(false);
 //                else
 //                    item.setChecked(true);
-//                main_content.setBackgroundColor(Color.GREEN);
+//                genderImage.setImageResource(R.drawable.skinnylady);
 //                return true;
 //            default:
 //                super.onOptionsItemSelected(item);

@@ -4,6 +4,10 @@
     android:layout_height="match_parent"
     android:fillViewport="true">
 
+
+
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -11,6 +15,7 @@
         android:layout_margin="16dp"
         android:orientation="vertical"
         android:id="@+id/main_content">
+
 
         <EditText
             android:id="@+id/pet_name"
@@ -54,7 +59,8 @@
             android:hint="@string/street_name"
             android:layout_weight="1"/>
 
-        <LinearLayout
+
+    <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -91,4 +97,5 @@
         </LinearLayout>
 
     </LinearLayout>
+
 </ScrollView>

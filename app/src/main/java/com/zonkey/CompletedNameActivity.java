@@ -5,7 +5,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.DisplayMetrics;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.zonkey.saymyname.R;
@@ -19,6 +23,9 @@ public class CompletedNameActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_completed_name);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        toolbar.collapseActionView();
         final TextView completedNameTextView1 = (TextView) findViewById(R.id.completed_name_textview1);
         final TextView completedNameTextView2 = (TextView) findViewById(R.id.completed_name_text_view2);
         completedNameTextView1.setText(getString(R.string.your_name_is_string));
@@ -66,6 +73,39 @@ public class CompletedNameActivity extends AppCompatActivity {
         //This line is important because it defines that the animation ends on a floatValue of 1f(visible)
         valueAnimator.setFloatValues(1f);
 
+
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        ImageView genderImage = (ImageView)findViewById(R.id.gender_tester_image_view);
+        switch (item.getItemId()) {
+            case R.id.dude_theme:
+                if (item.isChecked())
+                    item.setChecked(false);
+                else
+                    item.setChecked(true);
+                genderImage.setImageResource(R.drawable.fatguy);
+                return true;
+            case R.id.chick_theme:
+                if (item.isChecked())
+                    item.setChecked(false);
+                else
+                    item.setChecked(true);
+                genderImage.setImageResource(R.drawable.skinnylady);
+                return true;
+            default:
+                super.onOptionsItemSelected(item);
+        }
+        return true;
 
     }
 
