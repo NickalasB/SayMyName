@@ -1,41 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
 
     <ImageView
         android:id="@+id/gender_tester_image_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/skinnylady"
-        android:layout_margin="8dp"/>
+        android:layout_margin="8dp"
+        android:src="@drawable/skinnylady" />
 
-    <TextView
-        android:id="@+id/completed_name_textview1"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:textColor="@android:color/white"
-        android:textSize="36sp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"/>
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/completed_name_textview1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:textColor="@android:color/white"
+            android:textSize="36sp" />
 
 
-    <TextView
-        android:id="@+id/completed_name_text_view2"
-        android:layout_below="@+id/completed_name_textview1"
+        <TextView
+            android:id="@+id/completed_name_text_view2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:textColor="@android:color/white"
+            android:textSize="36sp" />
+
+    </LinearLayout>
+
+
+    <android.support.design.widget.FloatingActionButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:textColor="@android:color/white"
-        android:textSize="36sp"
-        android:layout_margin="16dp"/>
-
-
-
+        android:layout_margin="16dp"
+        android:src="@drawable/skinnylady"/>
 </RelativeLayout>
