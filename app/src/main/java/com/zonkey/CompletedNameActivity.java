@@ -4,11 +4,13 @@ import android.animation.ValueAnimator;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.DisplayMetrics;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -29,6 +31,22 @@ public class CompletedNameActivity extends AppCompatActivity {
         final TextView completedNameTextView1 = (TextView) findViewById(R.id.completed_name_textview1);
         final TextView completedNameTextView2 = (TextView) findViewById(R.id.completed_name_text_view2);
         completedNameTextView1.setText(getString(R.string.your_name_is_string));
+        //This sets up the floating action share button
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.share_button);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent sharingIntent = new Intent(Intent.ACTION_SEND);
+                sharingIntent.setType("text/plain");
+                String emailSubject = getString(R.string.share_subject_string);
+                String stringToShare = getText(R.string.your_name_is_string) + completedNameTextView2.getText().toString()
+                        + getText(R.string.how_hot_string) + getText(R.string.find_out_string);
+                sharingIntent.putExtra(Intent.EXTRA_TEXT, stringToShare);
+                sharingIntent.putExtra(Intent.EXTRA_SUBJECT, emailSubject);
+                startActivity(Intent.createChooser(sharingIntent, "Share via"));
+            }
+        });
+
 
         //This gives us the screen width in pixels
         DisplayMetrics displayMetrics = getResources().getDisplayMetrics();
@@ -108,6 +126,8 @@ public class CompletedNameActivity extends AppCompatActivity {
         return true;
 
     }
+
+
 
 
 }

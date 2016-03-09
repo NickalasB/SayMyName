@@ -18,8 +18,9 @@ public class Tab2 extends Tab1 {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View v =inflater.inflate(R.layout.tab_2,container,false);
-        return v;
+        View rootView =inflater.inflate(R.layout.tab_2,container,false);
+
+        return rootView;
     }
 }
 

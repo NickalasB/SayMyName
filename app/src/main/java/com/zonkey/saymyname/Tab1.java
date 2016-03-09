@@ -21,7 +21,9 @@ public class Tab1 extends Fragment {
      * fragment.
      */
     private static final String ARG_SECTION_NUMBER = "section_number";
-    private ImageView genderImage;
+    public ImageView genderImage1;
+    public Switch genderSwitch;
+
 
     /**
      * Returns a new instance of this fragment for the given section
@@ -36,15 +38,16 @@ public class Tab1 extends Fragment {
     }
 
     @Override
-    public View onCreateView(final LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         View rootView = inflater.inflate(R.layout.tab_1, container, false);
-        genderImage = (ImageView) rootView.findViewById(R.id.stripperPicImageView);
-        Switch genderSwitch = (Switch) rootView.findViewById(R.id.gender_switch);
+        genderImage1 = (ImageView) rootView.findViewById(R.id.genericStripperImage);
+        genderSwitch = (Switch) rootView.findViewById(R.id.gender_switch);
         genderSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                genderImage.setImageResource(isChecked ? R.drawable.fatlady : R.drawable.fatguy);
+                genderImage1.setImageResource(isChecked ? R.drawable.fatlady : R.drawable.fatguy);
+                Bundle imageBundle = new Bundle();
             }
         });
         return rootView;

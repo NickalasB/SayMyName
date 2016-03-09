@@ -16,6 +16,14 @@
         android:orientation="vertical"
         android:id="@+id/main_content">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/content_stripper_name_deets"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            style="@style/TextStyle"/>
 
         <EditText
             android:id="@+id/pet_name"
@@ -28,7 +36,8 @@
             android:spinnerMode="dialog"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            >
         </Spinner>
 
 
@@ -91,8 +100,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_weight="1"
-                android:onClick="generateTwistedName"
-                android:text="@string/twisted_name_generator" />
+                android:onClick="generateFreakyName"
+                android:text="@string/freaky_name_generator" />
 
         </LinearLayout>
 

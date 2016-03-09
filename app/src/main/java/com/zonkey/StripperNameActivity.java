@@ -95,10 +95,10 @@ public class StripperNameActivity extends AppCompatActivity {
 
     }
     /**
-     * this method is called when the twisted button is pressed
+     * this method is called when the Freaky button is pressed
      * @param view
      */
-    public void generateTwistedName (View view){
+    public void generateFreakyName (View view){
         Spinner muppetSpinner = (Spinner) findViewById(R.id.muppet_name_spinner);
         EditText iceCreamText = (EditText)findViewById(R.id.ice_cream);
         String stripperName = muppetSpinner.getSelectedItem().toString() + " " + iceCreamText.getText().toString();
