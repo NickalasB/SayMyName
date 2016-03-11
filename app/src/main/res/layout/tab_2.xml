@@ -6,21 +6,22 @@
     tools:context="com.zonkey.saymyname.MainActivity$PlaceholderFragment">
 
 
-    <include
-        layout="@layout/stripper_image_layout"
-        android:layout_width="match_parent"
+    <ImageView
+        android:id="@+id/tab2ImageView"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/tab2LinearLayout"/>
+        android:layout_margin="8dp"
+        android:src="@drawable/bigladystripper"
+        android:scaleType="fitCenter"/>
 
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
         android:padding="16dp"
         android:text="@string/tab_2_textView"
         android:textColor="@android:color/white"
         android:textSize="24sp"
-        android:layout_alignParentTop="true"/>
+        android:layout_centerInParent="true" />
 
 
     <LinearLayout

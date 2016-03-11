@@ -1,7 +1,9 @@
 package com.zonkey;
 
 import android.animation.ValueAnimator;
+import android.app.AlertDialog;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.design.widget.FloatingActionButton;
@@ -18,6 +20,9 @@ import com.zonkey.saymyname.R;
 
 public class CompletedNameActivity extends AppCompatActivity {
 
+    MediaPlayer whistleSound;
+
+
     /**
      * all of this handles getting the extra string from the StripperNameActivity and also does some rudimentary animation
      */
@@ -25,6 +30,7 @@ public class CompletedNameActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_completed_name);
+        whistleSound = MediaPlayer.create(this, R.raw.whistle);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         toolbar.collapseActionView();
@@ -90,9 +96,13 @@ public class CompletedNameActivity extends AppCompatActivity {
         valueAnimator.start();
         //This line is important because it defines that the animation ends on a floatValue of 1f(visible)
         valueAnimator.setFloatValues(1f);
+        //this plays the sound at the same time the 2nd view
+        whistleSound.start();
 
 
     }
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -120,6 +130,15 @@ public class CompletedNameActivity extends AppCompatActivity {
                     item.setChecked(true);
                 genderImage.setImageResource(R.drawable.skinnylady);
                 return true;
+            case R.id.about_developer:
+                if (item.isChecked())
+                    item.setChecked(false);
+                else
+                item.setChecked(false);
+                new AlertDialog.Builder(this)
+                .setTitle(getString(R.string.about_developer_string))
+                .setMessage(getString(R.string.about_dev_dialog_title))
+                        .show();
             default:
                 super.onOptionsItemSelected(item);
         }

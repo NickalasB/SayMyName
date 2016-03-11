@@ -16,6 +16,12 @@
             app:showAsAction="never"
             android:title="@string/chick_theme_string"/>
 
+        <item
+            android:id="@+id/about_developer"
+            android:orderInCategory="3"
+            app:showAsAction="never"
+            android:title="@string/about_developer_string"/>
+
 
 
     </group>

@@ -66,6 +66,11 @@
     <!--Menu item Strings-->
     <string name="chick_theme_string">Chick Theme</string>
     <string name="dude_theme_string">Dude Theme</string>
+    <string name="about_developer_string">About Developer</string>
+    <string name="about_dev_dialog_title">This app was built as part of Udacity.com\'s \"How to create &amp;ltanything&amp;gt in Android\" course. Check it out at <a href="http://udacity.com/">Udacity.com</a></string>
+
+
+
 
     <!--CompletedStripperNameActivity String-->
     <string name="your_name_is_string">Your stripper name is</string>

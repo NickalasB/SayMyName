@@ -42,15 +42,20 @@ public class Tab1 extends Fragment {
 
         View rootView = inflater.inflate(R.layout.tab_1, container, false);
         genderImage1 = (ImageView) rootView.findViewById(R.id.genericStripperImage);
+        updateGenderImage();
         genderSwitch = (Switch) rootView.findViewById(R.id.gender_switch);
         genderSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                genderImage1.setImageResource(isChecked ? R.drawable.fatlady : R.drawable.fatguy);
-                Bundle imageBundle = new Bundle();
+                GenderPicker.setChickMode(isChecked, getActivity());
+                updateGenderImage();
             }
         });
         return rootView;
+    }
+
+    protected void updateGenderImage() {
+        genderImage1.setImageResource(GenderPicker.isInChickMode(getActivity()) ? R.drawable.fatlady : R.drawable.fatguy);
     }
 
 }
