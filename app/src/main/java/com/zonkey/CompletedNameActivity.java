@@ -16,12 +16,13 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.zonkey.saymyname.GenderPicker;
 import com.zonkey.saymyname.R;
 
 public class CompletedNameActivity extends AppCompatActivity {
 
     MediaPlayer whistleSound;
-
+    ImageView genderImage1;
 
     /**
      * all of this handles getting the extra string from the StripperNameActivity and also does some rudimentary animation
@@ -30,6 +31,10 @@ public class CompletedNameActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_completed_name);
+        //Declares the imageView and then uses the UpdateGenderImage to determine User's preference
+        genderImage1 = (ImageView) findViewById(R.id.genericStripperImage);
+        updateGenderImage();
+
         whistleSound = MediaPlayer.create(this, R.raw.whistle);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -37,6 +42,7 @@ public class CompletedNameActivity extends AppCompatActivity {
         final TextView completedNameTextView1 = (TextView) findViewById(R.id.completed_name_textview1);
         final TextView completedNameTextView2 = (TextView) findViewById(R.id.completed_name_text_view2);
         completedNameTextView1.setText(getString(R.string.your_name_is_string));
+
         //This sets up the floating action share button
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.share_button);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -45,21 +51,20 @@ public class CompletedNameActivity extends AppCompatActivity {
                 Intent sharingIntent = new Intent(Intent.ACTION_SEND);
                 sharingIntent.setType("text/plain");
                 String emailSubject = getString(R.string.share_subject_string);
-                String stringToShare = getText(R.string.your_name_is_string) + completedNameTextView2.getText().toString()
+                String stringToShare = getText(R.string.my_name_is_string) + " " + completedNameTextView2.getText().toString()
                         + getText(R.string.how_hot_string) + getText(R.string.find_out_string);
                 sharingIntent.putExtra(Intent.EXTRA_TEXT, stringToShare);
                 sharingIntent.putExtra(Intent.EXTRA_SUBJECT, emailSubject);
-                startActivity(Intent.createChooser(sharingIntent, "Share via"));
+                startActivity(Intent.createChooser(sharingIntent, "Share your stripper name"));
             }
         });
-
 
         //This gives us the screen width in pixels
         DisplayMetrics displayMetrics = getResources().getDisplayMetrics();
         //before animate this sets the view to the left of the screen by the width of the current screen
         completedNameTextView1.setTranslationX(-displayMetrics.widthPixels);
 
-        //delays the first animation
+        //sets how long it will take for the first animation to complete
         completedNameTextView1.post(new Runnable() {
             @Override
             public void run() {
@@ -68,8 +73,7 @@ public class CompletedNameActivity extends AppCompatActivity {
             }
         });
 
-
-        //this handler delays the 2nd textview from showing on the screen
+        //this handler and runnable delays the 2nd TextView from showing on the screen until the first animation is complete
         final Handler textView2Handler = new Handler();
         Runnable textView2Runnable = new Runnable() {
             public void run() {
@@ -82,8 +86,19 @@ public class CompletedNameActivity extends AppCompatActivity {
         };
         textView2Handler.postDelayed(textView2Runnable, 1250);
 
+        //this hanlder and runnable delays the whistle sound from running until the 2nd animation starts
+        final Handler mediaPlayerHandler = new Handler();
+        Runnable mediaPlayerRunnable = new Runnable() {
+            @Override
+            public void run() {
+                //this plays the sound at the same time the 2nd view
+                whistleSound.start();
+            }
+        };
+        mediaPlayerHandler.postDelayed(mediaPlayerRunnable, 1250);
 
-        //This handles the animation of the 2nd textview
+
+        //This handles the flashing of the 2nd Textview between visible (1f) and not visible(0f)
         ValueAnimator valueAnimator = ValueAnimator.ofFloat(1f, 0f);
         valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
@@ -96,12 +111,10 @@ public class CompletedNameActivity extends AppCompatActivity {
         valueAnimator.start();
         //This line is important because it defines that the animation ends on a floatValue of 1f(visible)
         valueAnimator.setFloatValues(1f);
-        //this plays the sound at the same time the 2nd view
-        whistleSound.start();
+
 
 
     }
-
 
 
     @Override
@@ -114,14 +127,14 @@ public class CompletedNameActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        ImageView genderImage = (ImageView)findViewById(R.id.gender_tester_image_view);
+        ImageView genderImage = (ImageView) findViewById(R.id.genericStripperImage);
         switch (item.getItemId()) {
             case R.id.dude_theme:
                 if (item.isChecked())
                     item.setChecked(false);
                 else
                     item.setChecked(true);
-                genderImage.setImageResource(R.drawable.fatguy);
+                genderImage.setImageResource(R.drawable.muscle_man);
                 return true;
             case R.id.chick_theme:
                 if (item.isChecked())
@@ -134,11 +147,12 @@ public class CompletedNameActivity extends AppCompatActivity {
                 if (item.isChecked())
                     item.setChecked(false);
                 else
-                item.setChecked(false);
+                    item.setChecked(false);
                 new AlertDialog.Builder(this)
-                .setTitle(getString(R.string.about_developer_string))
-                .setMessage(getString(R.string.about_dev_dialog_title))
+                        .setTitle(getString(R.string.about_developer_string))
+                        .setMessage(getString(R.string.about_dev_dialog_text))
                         .show();
+                return true;
             default:
                 super.onOptionsItemSelected(item);
         }
@@ -146,7 +160,15 @@ public class CompletedNameActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * this method recalls the shared preferences for the ImageView the user defines in Tab1
+     */
+    protected void updateGenderImage() {
+        if (GenderPicker.isInChickMode(this))
+            genderImage1.setImageResource(R.drawable.skinnylady);
+        else genderImage1.setImageResource(R.drawable.muscle_man);
 
+    }
 
 
 }

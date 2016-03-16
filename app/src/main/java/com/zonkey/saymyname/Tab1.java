@@ -42,20 +42,44 @@ public class Tab1 extends Fragment {
 
         View rootView = inflater.inflate(R.layout.tab_1, container, false);
         genderImage1 = (ImageView) rootView.findViewById(R.id.genericStripperImage);
+        //updates image from shared preferences
         updateGenderImage();
         genderSwitch = (Switch) rootView.findViewById(R.id.gender_switch);
+        //updates state of the switch to match image from shared preferences
+        updateGenderSwitch();
+
         genderSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                //recall the image and the state of the switch from custom class for shared preferences
                 GenderPicker.setChickMode(isChecked, getActivity());
+                GenderPicker.setChickChecked(isChecked, getActivity());
                 updateGenderImage();
+                updateGenderSwitch();
+
             }
         });
         return rootView;
     }
 
+    /**
+     * this method sets the image the user sees on this view recalled from shared preferences
+     */
     protected void updateGenderImage() {
-        genderImage1.setImageResource(GenderPicker.isInChickMode(getActivity()) ? R.drawable.fatlady : R.drawable.fatguy);
+        if (GenderPicker.isInChickMode(getActivity()))
+            genderImage1.setImageResource(R.drawable.fatlady);
+        else genderImage1.setImageResource(R.drawable.fatguy);
+    }
+
+
+    /**
+     * this method sets the Switch to checked or not based on the user's image selection from shared preferences
+     */
+    protected void updateGenderSwitch(){
+        if (GenderPicker.isChickChecked(getActivity()))
+                genderSwitch.setChecked(true);
+        else genderSwitch.setChecked(false);
+
     }
 
 }

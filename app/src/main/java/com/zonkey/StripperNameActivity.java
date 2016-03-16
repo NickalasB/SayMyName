@@ -3,7 +3,6 @@ package com.zonkey;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -23,10 +22,6 @@ public class StripperNameActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stripper_name);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        toolbar.collapseActionView();
-
 //All of this is the muppet Spinner
         muppetSpinner = (Spinner) findViewById(R.id.muppet_name_spinner);
         ArrayAdapter<CharSequence> muppetAdapter = ArrayAdapter.createFromResource(this, R.array.muppets_array, R.layout.spinner_layout);

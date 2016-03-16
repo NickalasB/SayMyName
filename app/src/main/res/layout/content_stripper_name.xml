@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true">
-    
+
 
     <LinearLayout
         android:id="@+id/main_content"
@@ -33,7 +33,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:spinnerMode="dialog"></Spinner>
+            android:spinnerMode="dialog"/>
 
 
         <EditText
@@ -48,7 +48,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:entries="@array/fast_food_array"
-            android:spinnerMode="dialog"></Spinner>
+            android:spinnerMode="dialog"/>
 
         <EditText
             android:id="@+id/ice_cream"

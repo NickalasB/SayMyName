@@ -25,7 +25,7 @@
         <activity
             android:name="com.zonkey.StripperNameActivity"
             android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="adjustPan"
+            android:windowSoftInputMode="stateUnchanged|adjustPan"
             android:screenOrientation="portrait"/>
         <activity android:name="com.zonkey.CompletedNameActivity"
             android:screenOrientation="portrait"/>

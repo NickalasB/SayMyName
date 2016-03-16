@@ -66,20 +66,19 @@
     <!--Menu item Strings-->
     <string name="chick_theme_string">Chick Theme</string>
     <string name="dude_theme_string">Dude Theme</string>
-    <string name="about_developer_string">About Developer</string>
-    <string name="about_dev_dialog_title">This app was built as part of Udacity.com\'s \"How to create &amp;ltanything&amp;gt in Android\" course. Check it out at <a href="http://udacity.com/">Udacity.com</a></string>
+    <string name="about_developer_string">About App</string>
+    <string name="about_dev_dialog_text">This app was built as a project for Udacity\'s \"How to create \u003canything\u003e in Android\" course. Check it out at Udacity.com</string>
 
 
 
 
     <!--CompletedStripperNameActivity String-->
-    <string name="your_name_is_string">Your stripper name is</string>
+    <string name="your_name_is_string">My stripper name is</string>
     <!--Share strings-->
     <string name="share_subject_string">I used \"Say My Name\" to find my Stripper Name!</string>
-    <string name="my_name_is_string">My stripper name is </string>
+    <string name="my_name_is_string">My stripper name is</string>
     <string name="how_hot_string">\n\nHow hot is that?</string>
-    <string name="find_out_string">\nClick here to find out your stripper name: https://goo.gl/x3EpF3</string>
-
+    <string name="find_out_string">\nFind out your stripper name here: https://goo.gl/x3EpF3</string>
 
 
 </resources>

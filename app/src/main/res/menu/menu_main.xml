@@ -23,6 +23,5 @@
             android:title="@string/about_developer_string"/>
 
 
-
     </group>
 </menu>
