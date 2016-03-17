@@ -73,7 +73,7 @@
 
 
     <!--CompletedStripperNameActivity String-->
-    <string name="your_name_is_string">My stripper name is</string>
+    <string name="your_name_is_string">Your stripper name is</string>
     <!--Share strings-->
     <string name="share_subject_string">I used \"Say My Name\" to find my Stripper Name!</string>
     <string name="my_name_is_string">My stripper name is</string>

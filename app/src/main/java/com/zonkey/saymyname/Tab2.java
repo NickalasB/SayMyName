@@ -21,7 +21,5 @@ public class Tab2 extends Tab1 {
         View rootView =inflater.inflate(R.layout.tab_2,container,false);
         return rootView;
     }
-
-
 }
 

@@ -57,7 +57,7 @@ public class StripperNameActivity extends AppCompatActivity {
 //                    item.setChecked(false);
 //                else
 //                    item.setChecked(true);
-//                genderImage.setImageResource(R.drawable.fatguy);
+//                genderImage.setImageResource(R.drawable.tab1dude);
 //                return true;
 //            case R.id.chick_theme:
 //                if (item.isChecked())

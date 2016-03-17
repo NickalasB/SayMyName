@@ -39,6 +39,7 @@ public class CompletedNameActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         toolbar.collapseActionView();
+        //
         final TextView completedNameTextView1 = (TextView) findViewById(R.id.completed_name_textview1);
         final TextView completedNameTextView2 = (TextView) findViewById(R.id.completed_name_text_view2);
         completedNameTextView1.setText(getString(R.string.your_name_is_string));
@@ -78,6 +79,7 @@ public class CompletedNameActivity extends AppCompatActivity {
         Runnable textView2Runnable = new Runnable() {
             public void run() {
                 //this gets the extra of the previous activity to put the actual stripper name on the screen
+                //This is where the magic happens
                 Intent completedNameIntent = getIntent();
                 if (completedNameIntent.hasExtra("finalStripperName")) {
                     completedNameTextView2.setText(getIntent().getStringExtra("finalStripperName") + "!!!");

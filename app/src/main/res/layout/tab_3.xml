@@ -8,7 +8,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="fitCenter"
-        android:src="@drawable/cowboy" />
+        android:src="@drawable/tab3dude"
+        android:layout_margin="16dp"/>
 
     <LinearLayout
         android:layout_width="match_parent"

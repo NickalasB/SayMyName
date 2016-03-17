@@ -67,8 +67,8 @@ public class Tab1 extends Fragment {
      */
     protected void updateGenderImage() {
         if (GenderPicker.isInChickMode(getActivity()))
-            genderImage1.setImageResource(R.drawable.fatlady);
-        else genderImage1.setImageResource(R.drawable.fatguy);
+            genderImage1.setImageResource(R.drawable.tab1lady);
+        else genderImage1.setImageResource(R.drawable.tab1dude);
     }
 
 
