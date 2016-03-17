@@ -44,9 +44,16 @@
         <item>Grover</item>
         <item>Big Bird</item>
         <item>Animal</item>
+        <item>Skeeter</item>
         <item>Piggy</item>
         <item>Fozzy</item>
+        <item>Janice</item>
         <item>Beaker</item>
+        <item>Elmo</item>
+        <item>Gonzo</item>
+        <item>Rizzo</item>
+        <item>Scooter</item>
+        <item>Camilla</item>
         <item>Elmo</item>
     </string-array>
 
@@ -61,6 +68,12 @@
         <item>Foot Long</item>
         <item>Corn Dog</item>
         <item>Croissanwich</item>
+        <item>Beef \'n Cheddar</item>
+        <item>Extra Crispy</item>
+        <item>Pizza</item>
+
+
+
     </string-array>
 
     <!--Menu item Strings-->
@@ -78,7 +91,7 @@
     <string name="share_subject_string">I used \"Say My Name\" to find my Stripper Name!</string>
     <string name="my_name_is_string">My stripper name is</string>
     <string name="how_hot_string">\n\nHow hot is that?</string>
-    <string name="find_out_string">\nFind out your stripper name here: https://goo.gl/x3EpF3</string>
+    <string name="find_out_string">\nFind out your stripper name with \"Say My Name\" on Google Play: https://goo.gl/x3EpF3</string>
 
 
 </resources>

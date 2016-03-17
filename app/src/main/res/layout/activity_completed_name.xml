@@ -18,8 +18,7 @@
         layout="@layout/stripper_image_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        />
+        android:layout_centerInParent="true" />
 
 
     <LinearLayout
@@ -42,10 +41,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
-            android:textColor="@android:color/white"
-            android:textSize="40sp"
+            android:autoLink="web"
             android:linksClickable="true"
-            android:autoLink="web"/>
+            android:textColor="@android:color/white"
+            android:textSize="40sp" />
 
     </LinearLayout>
 

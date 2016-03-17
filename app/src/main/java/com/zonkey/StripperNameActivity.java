@@ -3,7 +3,6 @@ package com.zonkey;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.Menu;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
@@ -40,45 +39,10 @@ public class StripperNameActivity extends AppCompatActivity {
 
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-
-    }
-
-//    @Override
-//    public boolean onOptionsItemSelected(MenuItem item) {
-//        ImageView genderImage = (ImageView)findViewById(R.id.gender_tester_image_view);
-//        switch (item.getItemId()) {
-//            case R.id.dude_theme:
-//                if (item.isChecked())
-//                    item.setChecked(false);
-//                else
-//                    item.setChecked(true);
-//                genderImage.setImageResource(R.drawable.tab1dude);
-//                return true;
-//            case R.id.chick_theme:
-//                if (item.isChecked())
-//                    item.setChecked(false);
-//                else
-//                    item.setChecked(true);
-//                genderImage.setImageResource(R.drawable.skinnylady);
-//                return true;
-//            default:
-//                super.onOptionsItemSelected(item);
-//        }
-//        return true;
-//
-//    }
-
-
     /**
      * this method is called when the traditional button is pressed
      * @param view
      */
-
     public void generateTraditionalName (View view){
         EditText petText = (EditText) findViewById(R.id.pet_name);
         EditText streetText = (EditText)findViewById(R.id.street_name);
@@ -89,6 +53,7 @@ public class StripperNameActivity extends AppCompatActivity {
         startActivity(completedNameIntent);
 
     }
+
     /**
      * this method is called when the Freaky button is pressed
      * @param view
