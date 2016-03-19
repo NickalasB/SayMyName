@@ -20,27 +20,34 @@
             android:layout_gravity="center_horizontal"
             android:text="@string/content_stripper_name_deets"
             android:textSize="40sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"/>
 
         <EditText
             android:id="@+id/pet_name"
             style="@style/TextStyle"
             android:layout_weight="1"
-            android:hint="@string/pet_name" />
+            android:hint="@string/pet_name"
+            android:imeOptions="actionNext"
+            android:imeActionLabel="Next"
+            android:singleLine="true"/>
 
         <Spinner
             android:id="@+id/muppet_name_spinner"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:spinnerMode="dialog"/>
+            android:spinnerMode="dialog"
+            />
 
 
         <EditText
             android:id="@+id/grandparent_name"
             style="@style/TextStyle"
             android:layout_weight="1"
-            android:hint="@string/grandparent_name" />
+            android:hint="@string/grandparent_name"
+            android:imeOptions="actionNext"
+            android:imeActionLabel="Next"
+            android:singleLine="true"/>
 
         <Spinner
             android:id="@+id/fast_food_spinner"
@@ -54,13 +61,20 @@
             android:id="@+id/ice_cream"
             style="@style/TextStyle"
             android:layout_weight="1"
-            android:hint="@string/ice_cream" />
+            android:hint="@string/ice_cream"
+            android:imeOptions="actionNext"
+            android:imeActionLabel="Next"
+            android:singleLine="true"
+            />
 
         <EditText
             android:id="@+id/street_name"
             style="@style/TextStyle"
             android:layout_weight="1"
-            android:hint="@string/street_name" />
+            android:hint="@string/street_name"
+            android:imeOptions="actionDone"
+            android:imeActionLabel="Done"
+            android:singleLine="true"/>
 
 
         <LinearLayout
