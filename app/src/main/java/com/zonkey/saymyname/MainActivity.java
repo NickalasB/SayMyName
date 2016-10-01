@@ -1,6 +1,9 @@
 package com.zonkey.saymyname;
 
+import android.annotation.TargetApi;
+import android.app.ActivityOptions;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -58,9 +61,15 @@ public class MainActivity extends AppCompatActivity {
      * this method is called when the let's Dance button from Tab3 is clicked
      * @param view
      */
+    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     public void letsDance (View view) {
+
+        Bundle bundle = ActivityOptions
+                .makeSceneTransitionAnimation(this)
+                .toBundle();
+
         Intent stripperNameIntent;
         stripperNameIntent = new Intent(this, StripperNameActivity.class);
-        startActivity(stripperNameIntent);
+        startActivity(stripperNameIntent, bundle);
     }
 }

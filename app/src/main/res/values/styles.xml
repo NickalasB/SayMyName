@@ -2,6 +2,10 @@
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:transition">@transition/slide</item>
+        <item name="android:windowEnterTransition">@transition/slide</item>
+
         <!-- Lady theme. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
